@@ -23,9 +23,9 @@
                     return a+b.credit;
                 },
                 0));
-            data.stat={max:reduce(data,
-            (a,b) => a>b?a:b.credit)
-            ,min:reduce(data,(a,b) => a<b?a:b.credit)
+            data.stat={
+            max:reduce(data,(a,b) => a>b.credit?a:b.credit)
+            ,min:reduce(data,(a,b) => a<b.credit?a:b.credit)
             ,total:reduce(data,(a,b) => a + b.credit,0)
             }
 

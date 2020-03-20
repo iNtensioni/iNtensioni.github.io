@@ -1,4 +1,6 @@
-function reduce(array, combine, start) {
+
+(function(){
+    function reduce(array, combine, start) {
     var current = start;
     for (var element of array) {
         current = combine(current, element);
@@ -8,3 +10,6 @@ function reduce(array, combine, start) {
 var max = function(data){
     return reduce(data,(a,b) => a>b.credit?a:b.credit)
 }
+window.my={max:max};
+
+})()
